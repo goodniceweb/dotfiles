@@ -1,0 +1,20 @@
+# folders
+.idea/
+public/assets/
+node_modules/
+bower_components/
+elasticsearch/
+
+# people often hate rvmrc in git... why?
+.rvmrc
+
+# vim service files
+*.swp
+tags
+
+# sensetive ymls
+database.yml
+secrets.yml
+keys.yml
+paypal.yml
+
