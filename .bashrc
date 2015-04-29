@@ -2,13 +2,14 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias p='pushd'
+alias pp='popd'
+alias manb='man byobu'
 
 if [ -f $HOME/.bashenv ]; then
       . $HOME/.bashenv
 fi
 
-# -v /home/a/info/taxipixi/docker:/data/db \
-# -v /home/a/info/taxipixi/docker_hd:/var/jenkins_home \
 # docker
 alias mongo_docker="docker run --rm \
 -v $MONGO:/data/db \
