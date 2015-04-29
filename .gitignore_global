@@ -8,6 +8,12 @@ elasticsearch/
 # people often hate rvmrc in git... why?
 .rvmrc
 
+# my usecase files
+*.routes
+*.flog
+*.backup
+failures
+
 # vim service files
 *.swp
 tags
