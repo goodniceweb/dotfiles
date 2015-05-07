@@ -18,6 +18,10 @@ alias mongo_docker="docker run --rm \
 -p 27017:27017 \
 --name mongodb \
 mongod:2.6"
+alias redis_docker="docker run \
+--name redis \
+-p 6379:6379 \
+-d redis"
 alias jenkins_docker="docker run --rm \
 -p 8080:8080 \
 -v $JENKINS:/var/jenkins_home \
