@@ -79,5 +79,8 @@ nmap <silent> <C-I> :noh<cr>
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+let mapleader=' '
 
-let jshint2_command = '/home/a/npm/lib/node_modules/jshint/bin/jshint'
+nmap <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
+
+let jshint2_command = '~/npm/lib/node_modules/jshint/bin/jshint'
