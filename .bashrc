@@ -5,6 +5,8 @@ alias ....='cd ../../..'
 alias p='pushd'
 alias pp='popd'
 alias manb='man byobu'
+alias d='docker'
+alias clip='xclip -sel clip < '
 
 if [ -f $HOME/.bashenv ]; then
       . $HOME/.bashenv
