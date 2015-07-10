@@ -73,7 +73,7 @@ nmap <C-e> :call JsBeautify()<cr>
 
 " CTags
 nmap <silent> <C-L> :ta <C-R><C-W><cr>
-nmap <silent> <C-G> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<cr>
+nmap <silent> <C-G> :!ctags -R . $(bundle list --paths)<cr>
 " No highlight
 nmap <silent> <C-I> :noh<cr>
 
