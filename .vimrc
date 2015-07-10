@@ -44,6 +44,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'kien/ctrlp.vim'
 Plugin 'slim-template/vim-slim'
+Plugin 'AndrewRadev/vim-eco'
 call vundle#end()
 filetype plugin indent on
 
