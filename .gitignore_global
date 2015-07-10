@@ -16,7 +16,9 @@ failures
 
 # vim service files
 *.swp
+*.swo
 tags
+.tags
 
 # sensetive ymls
 database.yml
