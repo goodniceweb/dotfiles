@@ -58,6 +58,7 @@ highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Re
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+highlight Search     cterm=NONE ctermfg=10 ctermbg=17
 
 " seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
@@ -86,3 +87,4 @@ let mapleader=' '
 nmap <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 let jshint2_command = '~/npm/lib/node_modules/jshint/bin/jshint'
+autocmd QuickFixCmdPost *grep* cwindow
