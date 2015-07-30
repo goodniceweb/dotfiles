@@ -74,7 +74,10 @@ nmap <C-e> :call JsBeautify()<cr>
 
 " CTags
 "nmap <silent> <C-L> :ta <C-R><C-W><cr>
-nmap <silent> <C-L> <C-w><C-]><C-w>T
+"nmap <silent> <C-L> <C-w><C-]><C-w>T
+"FIXME: when no tag it create new tab anyway
+"       and double open tag if it's in same file
+nmap <silent> <C-L> :tab sp<cr>:ta <C-R><C-W><cr>
 nmap <silent> <C-G> :!ctags -R . $(bundle list --paths)<cr>
 " No highlight
 nmap <silent> <C-I> :noh<cr>
