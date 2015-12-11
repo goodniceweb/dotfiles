@@ -13,6 +13,11 @@ elasticsearch/
 *.flog
 *.backup
 failures
+*.patch
+screenshot*.html
+screenshot*.png
+TODO
+temp
 
 # vim service files
 *.swp
