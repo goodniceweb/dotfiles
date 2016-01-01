@@ -16,6 +16,7 @@ failures
 *.patch
 screenshot*.html
 screenshot*.png
+*.log
 TODO
 temp
 
