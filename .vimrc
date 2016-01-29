@@ -80,10 +80,16 @@ nmap <silent> <C-G> :!ctags -R . $(bundle list --paths)<cr>
 " No highlight
 nmap <silent> <C-I> :noh<cr>
 
+
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 let mapleader=' '
+
+" vim-rspec
+map <Leader>s :call RunCurrentSpecFile()()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 nmap <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 
