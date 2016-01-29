@@ -20,11 +20,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/Vimball'
+Plugin 'vim-scripts/tComment'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/syntastic'
 Plugin 'hwartig/vim-seeing-is-believing'
@@ -40,6 +42,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'kien/ctrlp.vim'
 Plugin 'slim-template/vim-slim'
+Plugin 'danro/rename.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'AndrewRadev/vim-eco'
 call vundle#end()
 filetype plugin indent on
