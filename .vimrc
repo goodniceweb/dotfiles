@@ -1,13 +1,14 @@
 syntax on
-:set tabstop=2
-:set expandtab
-:set shiftwidth=2
-:set hidden
-:retab
-:set number
-:set hlsearch
-:set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
-:set laststatus=2
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set hidden
+retab
+set number
+set hlsearch
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set laststatus=2
+set noswapfile
 nnoremap <C-j> :bprevious<CR>
 nnoremap <C-k> :bnext<CR>
 
@@ -49,7 +50,7 @@ Plugin 'AndrewRadev/vim-eco'
 call vundle#end()
 filetype plugin indent on
 
-:set t_Co=256
+set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
