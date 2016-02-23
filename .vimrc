@@ -9,6 +9,7 @@ set hlsearch
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set laststatus=2
 set noswapfile
+vmap <C-c> "+y
 nnoremap <C-j> :bprevious<CR>
 nnoremap <C-k> :bnext<CR>
 
@@ -47,12 +48,18 @@ Plugin 'danro/rename.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'AndrewRadev/vim-eco'
+Plugin 'alvan/vim-closetag'
 call vundle#end()
 filetype plugin indent on
 
 set t_Co=256
+
+" fonts airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" closetag
+let g:closetag_filenames = "*.html,*.haml,*.hamlc,*.jst,*.jst.eco,*.slim"
 
 " vimdiff configs
 :set diffopt+=vertical
