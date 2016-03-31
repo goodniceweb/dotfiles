@@ -1,33 +1,50 @@
-# nav aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias p='pushd'
-alias pp='popd'
-alias manb='man byobu'
-alias d='docker'
-alias clip='xclip -sel clip < '
-
+# bashenv needs for customize bash depends on comp it's running
 if [ -f $HOME/.bashenv ]; then
       . $HOME/.bashenv
 fi
 
-# docker
-alias mongo_docker="docker run --rm \
--v $MONGO:/data/db \
--p 27017:27017 \
---name mongodb \
-mongod:2.6"
-alias redis_docker="docker run \
---name redis \
--p 6379:6379 \
--d redis"
-alias jenkins_docker="docker run --rm \
--p 8080:8080 \
--v $JENKINS:/var/jenkins_home \
---name myjenkins \
---link mongodb:db \
-taxipixi/jenkins:latest"
+# nav aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# command line to system clipboard
+# dependency:
+# sudo apt-get install xclip
+alias clip='xclip -sel clip < '
+
+# useful staff when you work with ports and network
+alias portusage='netstat -tulpn'
+
+#TODO: move line below to git aliases
+#alias make_patch='git format-patch -1 HEAD'
+alias gitlbr='git for-each-ref --sort=-committerdate refs/heads/ --format="%(refname) %(committerdate)" | sed "s/refs\/heads\///g" | column -t | head -n 15'
+alias git-root='cd $(git rev-parse --show-cdup)'
+
+# Don't use swap file
+alias vim='vim -n'
+alias vi='vim -n'
+
+# I <3 rvm
+alias r='reload_directory'
+
+# to be honest: X in linux can fail from time to time :)
+alias startx='startx -- -nolisten tcp'
+
+# https://hub.github.com/
+alias git='hub'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+# Useful for long time tasks who blocks your current work
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # TODO: not work well for me
 # git branch in prompt
@@ -81,8 +98,16 @@ xterm*|rxvt*)
     ;;
 esac
 
+# https://github.com/Linuxbrew/linuxbrew
+# Installation
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)"
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add to PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load *as a function*
+
+# https://github.com/asdf-vm/asdf
+. $HOME/.asdf/asdf.sh
