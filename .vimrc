@@ -46,7 +46,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'danro/rename.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'alvan/vim-closetag'
 call vundle#end()
