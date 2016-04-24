@@ -104,10 +104,11 @@ esac
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+<<<<<<< Updated upstream
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add to PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load *as a function*
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # https://github.com/asdf-vm/asdf
 . $HOME/.asdf/asdf.sh
