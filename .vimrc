@@ -49,6 +49,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'alvan/vim-closetag'
 Plugin 'rust-lang/rust.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'elixir-lang/vim-elixir'
 call vundle#end()
 filetype plugin indent on
 
@@ -93,6 +95,9 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 let mapleader=' '
+
+" ejs
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " vim-rspec
 map <Leader>s :call RunCurrentSpecFile()()<CR>

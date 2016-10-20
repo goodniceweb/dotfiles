@@ -34,7 +34,12 @@ alias r='reload_directory'
 alias startx='startx -- -nolisten tcp'
 
 # https://hub.github.com/
-alias git='hub'
+if [ -d "$HOME/bin"  ]; then
+  export PATH="$HOME/bin:$PATH"
+fi
+if [[ $(which hub)  ]]; then
+  alias git='hub'
+fi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -110,4 +115,13 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # https://github.com/asdf-vm/asdf
-. $HOME/.asdf/asdf.sh
+[[ -s "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
+[[ -s "$HOME/.asdf/completions/asdf.bash" ]] && . $HOME/.asdf/completions/asdf.bash
+
+# Android studio
+if [ -d "$HOME/soft/android-studio"  ]; then
+  export PATH="$PATH:$HOME/soft/android-studio/bin"
+fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

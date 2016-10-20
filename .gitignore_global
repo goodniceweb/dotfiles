@@ -4,6 +4,7 @@ public/assets/
 node_modules/
 bower_components/
 elasticsearch/
+public/test_assets/
 
 # people often hate rvmrc in git... why?
 .rvmrc
@@ -31,4 +32,3 @@ database.yml
 secrets.yml
 keys.yml
 paypal.yml
-
