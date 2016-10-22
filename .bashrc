@@ -45,6 +45,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ls='ls --color'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -117,6 +118,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # https://github.com/asdf-vm/asdf
 [[ -s "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
 [[ -s "$HOME/.asdf/completions/asdf.bash" ]] && . $HOME/.asdf/completions/asdf.bash
+
+# Exports
+export EDITOR="vim"
 
 # Android studio
 if [ -d "$HOME/soft/android-studio"  ]; then
