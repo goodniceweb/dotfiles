@@ -17,43 +17,39 @@ nnoremap <C-k> :bnext<CR>
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/Vimball'
-Plugin 'vim-scripts/tComment'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'scrooloose/syntastic'
-Plugin 'hwartig/vim-seeing-is-believing'
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'kien/ctrlp.vim'
-Plugin 'slim-template/vim-slim'
-Plugin 'danro/rename.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'AndrewRadev/vim-eco'
-Plugin 'alvan/vim-closetag'
-Plugin 'rust-lang/rust.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'isRuslan/vim-es6'
-Plugin 'mxw/vim-jsx'
-call vundle#end()
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'vim-scripts/Vimball'
+Plug 'vim-scripts/tComment'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
+Plug 'scrooloose/syntastic'
+Plug 'hwartig/vim-seeing-is-believing'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'kchmck/vim-coffee-script'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'kien/ctrlp.vim'
+Plug 'slim-template/vim-slim'
+Plug 'danro/rename.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'AndrewRadev/vim-eco'
+Plug 'alvan/vim-closetag'
+Plug 'elixir-lang/vim-elixir'
+Plug 'isRuslan/vim-es6'
+Plug 'mxw/vim-jsx'
+Plug 'othree/yajs.vim'
+call plug#end()
 filetype plugin indent on
 
 set t_Co=256
@@ -97,9 +93,6 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 let mapleader=' '
-
-" ejs
-au BufNewFile,BufRead *.ejs set filetype=html
 
 " vim-rspec
 map <Leader>s :call RunCurrentSpecFile()()<CR>
