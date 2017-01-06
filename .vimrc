@@ -48,6 +48,9 @@ Plugin 'danro/rename.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'alvan/vim-closetag'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'isRuslan/vim-es6'
+Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on
 
