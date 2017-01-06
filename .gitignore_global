@@ -1,9 +1,11 @@
+.DS_Store
 # folders
 .idea/
 public/assets/
 node_modules/
 bower_components/
 elasticsearch/
+public/test_assets/
 
 # people often hate rvmrc in git... why?
 .rvmrc
