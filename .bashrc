@@ -22,6 +22,7 @@ alias portusage='netstat -tulpn'
 #alias make_patch='git format-patch -1 HEAD'
 alias gitlbr='git for-each-ref --sort=-committerdate refs/heads/ --format="%(refname) %(committerdate)" | sed "s/refs\/heads\///g" | column -t | head -n 15'
 alias git-root='cd $(git rev-parse --show-cdup)'
+[[ -s "$HOME/git-completion.bash" ]] && source $HOME/git-completion.bash
 
 # Don't use swap file
 alias vim='vim -n'
@@ -118,6 +119,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # https://github.com/asdf-vm/asdf
 [[ -s "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
 [[ -s "$HOME/.asdf/completions/asdf.bash" ]] && . $HOME/.asdf/completions/asdf.bash
+
+# Docker autocomplete
+[[ -s "$HOME/.docker-completion.sh" ]] && source "$HOME/.docker-completion.sh"
 
 # Exports
 export EDITOR="vim"
