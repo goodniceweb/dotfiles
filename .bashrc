@@ -64,6 +64,9 @@ justkill() {
 killsidekiq() {
   ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9
 }
+gggrep() {
+  git grep -l "$1" | xargs sed -i "s/$1/$2/g"
+}
 
 # terminator title
 ORIG=$PS1
@@ -133,3 +136,10 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# https://github.com/magicmonty/bash-git-prompt
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_END_USER="${White}${ResetColor} $ "
+if [ -f $HOME/.bash-git-prompt/gitprompt.sh ]; then
+  source $HOME/.bash-git-prompt/gitprompt.sh
+fi

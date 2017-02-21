@@ -33,3 +33,7 @@ database.yml
 secrets.yml
 keys.yml
 paypal.yml
+
+# temporary
+spec/fixtures/allergies_error_log.html
+spec/fixtures/medical_episodes_error_log.html
